@@ -1,0 +1,38 @@
+h1 {
+  margin: 2rem 0 !important;
+}
+
+h1, h2, .lead {
+  text-align: center;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+footer {
+  .credit {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .external-link {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    color: $body-bg;
+
+      &:hover, &:focus {
+        color: $primary;
+        background-color: $body-bg;
+      }
+
+  }
+}
