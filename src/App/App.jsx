@@ -1,5 +1,6 @@
 import "./App.scss";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import Translate from "../Components/Translate";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <Row>
           <Col>
             <h1>Know Your Rights</h1>
+            <Translate />
             {/* <p className="lead">
               If you are reading this, you have constitutional rights.
             </p> */}
