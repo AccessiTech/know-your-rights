@@ -1,8 +1,32 @@
 import "./App.scss";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import React from "react";
+import { Button, Col, Container, Nav, Row } from "react-bootstrap";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 import Translate from "../Components/Translate";
 
 function App() {
+  const leftColContent = (
+    <>
+      <p>
+        I do not wish to speak with you, answer your questions, or sign or hand
+        you any documents based on my 5th Amendment rights under the United
+        States Constitution.
+      </p>
+      <p>
+        I do not give you permission to enter my home based on my 4th Amendment
+        rights under the United States Constitution unless you have a warrant to
+        enter, signed by a judge or magistrate with my name on it that you slide
+        under the door.
+      </p>
+      <p>
+        I do not give you permission to search any of my belongings based on my
+        4th Amendment rights.
+      </p>
+      <p>I choose to exercise my constitutional rights.</p>
+    </>
+  );
+
   return (
     <Container>
       <header>
@@ -42,23 +66,39 @@ function App() {
             </p>
           </Col>
           <Col md={6}>
-            <h2>To the agent</h2>
-            <p>
-              I do not wish to speak with you, answer your questions, or sign or
-              hand you any documents based on my 5th Amendment rights under the
-              United States Constitution.
-            </p>
-            <p>
-              I do not give you permission to enter my home based on my 4th
-              Amendment rights under the United States Constitution unless you
-              have a warrant to enter, signed by a judge or magistrate with my
-              name on it that you slide under the door.
-            </p>
-            <p>
-              I do not give you permission to search any of my belongings based
-              on my 4th Amendment rights.
-            </p>
-            <p>I choose to exercise my constitutional rights.</p>
+            <Tab.Container defaultActiveKey="translated" id="language-tabs">
+              <Row>
+                <Col>
+                  <h2>To the agent</h2>
+                </Col>
+                <Col style={{ width: '100%'}}>
+                  <Nav variant="pills" className="justify-content-end">
+                    <Nav.Item>
+                      <Nav.Link eventKey="translated">Translated</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="english">English</Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Tab.Content>
+                    <Tab.Pane eventKey="translated" title="Translated">
+                      {leftColContent}
+                    </Tab.Pane>
+                    <Tab.Pane
+                      eventKey="english"
+                      title="English"
+                      className="skiptranslate"
+                    >
+                      {leftColContent}
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Col>
+              </Row>
+            </Tab.Container>
           </Col>
         </Row>
       </main>
