@@ -1,0 +1,12 @@
+#google_translate_element {
+  margin-bottom: 1rem;
+  & > div {
+    color: white;
+    a {
+      color: white;
+    }
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
