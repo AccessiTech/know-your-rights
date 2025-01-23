@@ -15,6 +15,28 @@
 
 <body>
     <div id="root"></div>
+    <script type="text/javascript">
+        // define the google translate element initialization function
+        function googleTranslateElementInit() {
+            // initialize google translate
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            // define the browser's default language
+            const pageLanguage = (navigator.language || navigator.userLanguage)?.slice(0, 2);
+
+            // wait 1000ms for the google translate element to load
+            setTimeout(() => {
+                // define the google translate element
+                const googleTranslateElement = document.querySelector('#google_translate_element select');
+                // if the google translate element exists and the browser's default language is available
+                if (googleTranslateElement && [...googleTranslateElement.children].find(o => o.value === pageLanguage)) {
+                    // set the google translate element to the browser's default language
+                    googleTranslateElement.value = pageLanguage;
+                    // dispatch a change event to trigger the google translation of the page
+                    googleTranslateElement.dispatchEvent(new Event('change'));
+                }
+            }, 1000);
+        }
+    </script>
     <script type="module" src="/src/index.jsx"></script>
 </body>
 
