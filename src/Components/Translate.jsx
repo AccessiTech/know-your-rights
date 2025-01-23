@@ -14,7 +14,7 @@ function Translate() {
   });
   return (
     <Row>
-      <Col style={{ textAlign: "center", colorScheme: 'firebrick' }}>
+      <Col style={{ textAlign: "center", colorScheme: '#B11111' }}>
         <div id="google_translate_element"></div>
       </Col>
     </Row>
