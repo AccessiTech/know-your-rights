@@ -71,7 +71,7 @@ function App() {
                 <Col>
                   <h2>To the agent</h2>
                 </Col>
-                <Col style={{ width: '100%'}}>
+                <Col style={{ width: "100%" }}>
                   <Nav variant="pills" className="justify-content-end">
                     <Nav.Item>
                       <Nav.Link eventKey="translated">Translated</Nav.Link>
@@ -126,6 +126,29 @@ function App() {
             >
               More about YOUR RIGHTS
             </Button>
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            xs={{ span: 8, offset: 2 }}
+            sm={{ span: 6, offset: 3 }}
+            md={{ span: 4, offset: 4 }}
+            lg={{ span: 2, offset: 5 }}
+          >
+            <a
+              href="/"
+              target="_self"
+              rel="noopener noreferrer"
+              className="qr-link"
+              style={{ textAlign: "center" }}
+            >
+              <img
+                style={{ maxWidth: "100%", marginBottom: "0.5rem" }}
+                src="/assets/qr.png"
+                alt="QR code to this website"
+              />
+              <p>Scan to Share</p>
+            </a>
           </Col>
         </Row>
       </footer>
