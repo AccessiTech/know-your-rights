@@ -16,7 +16,7 @@ export default defineConfig(() => {
       },
     },
 
-    // base url should be /ReadCards/ for production and / for development
-    base: env.VITE_APP_ENV === "production" ? "/ReadCards/" : "/",
+    // base url should be /RedCards/ for production and / for development
+    base: env.VITE_APP_ENV === "production" ? "/RedCards/" : "/",
   };
 });
