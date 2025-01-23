@@ -144,7 +144,7 @@ function App() {
             >
               <img
                 style={{ maxWidth: "100%", marginBottom: "0.5rem" }}
-                src="/assets/qr.png"
+                src="/assets/qr.svg"
                 alt="QR code to this website"
               />
               <p>Scan to Share</p>
