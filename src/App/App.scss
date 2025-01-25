@@ -8,19 +8,11 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   border: 2px solid $primary;
 }
-
-footer {
-  .credit {
-    font-size: 0.8rem;
-    line-height: 1.2;
-    font-style: italic;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
+#rights {
   .external-link {
     display: flex;
     justify-content: center;
@@ -30,10 +22,57 @@ footer {
     border-radius: 1rem;
     color: $body-bg;
 
-      &:hover, &:focus {
-        color: $primary;
-        background-color: $body-bg;
-      }
+    h2 {
+      margin: 0;
+    }
 
+    &:hover,
+    &:focus {
+      color: $primary;
+      background-color: $body-bg;
+    }
+  }
+}
+.credit {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#resources {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  .dropdown {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .dropdown-link {
+    width: 100%;
+    color: $body-bg;
+  }
+  .dropdown-menu {
+    width: 100%;
+    border: 2px solid $primary;
+  }
+  .dropdown-item {
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      color: $body-bg;
+    }
+  }
+}
+
+footer {
+  margin-top: 1rem;
+
+  .credit {
+    margin-bottom: 0;
   }
 }
