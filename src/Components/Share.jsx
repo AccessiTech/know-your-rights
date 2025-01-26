@@ -1,9 +1,15 @@
 import { Row, Col } from "react-bootstrap";
 
 function Share() {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const shareHandler = (e) => {
     e.preventDefault();
 
+    if (!isMobile) {
+      navigator.clipboard.writeText("https://redcards.accessi.tech");
+      alert("Link copied to clipboard");
+      return;
+    }
     navigator
       .share({
         title: "Red Cards",
@@ -33,6 +39,7 @@ function Share() {
             style={{ textAlign: "center" }}
             onClick={shareHandler}
           >
+            <p>Click to {isMobile ? "Share" : "Copy"}</p>
             <img
               style={{ maxWidth: "100%", marginBottom: "0.5rem" }}
               src="/assets/qr.svg"
