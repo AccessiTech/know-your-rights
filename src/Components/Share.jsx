@@ -1,6 +1,21 @@
 import { Row, Col } from "react-bootstrap";
 
 function Share() {
+  const shareHandler = (e) => {
+    e.preventDefault();
+
+    navigator
+      .share({
+        title: "Red Cards",
+        text: "Know Your Rights",
+        url: "https://redcards.accessi.tech",
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  };
+
   return (
     <section id="share">
       <Row>
@@ -16,6 +31,7 @@ function Share() {
             rel="noopener noreferrer"
             className="qr-link"
             style={{ textAlign: "center" }}
+            onClick={shareHandler}
           >
             <img
               style={{ maxWidth: "100%", marginBottom: "0.5rem" }}
