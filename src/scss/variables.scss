@@ -1,10 +1,14 @@
 $primary: white;
-$body-bg: #B11111;
+$secondary:#b11111;
+$body-bg: $secondary;
 
 $body-color: $primary;
 $link-color: $primary;
 $link-hover-color: $primary;
 $link-focus-color: $primary;
+
+// $btn-color: $body-bg;
+// $btn-link-color: $primary;
 
 $headings-margin-bottom: 1rem;
 $btn-border-width: 2px;
