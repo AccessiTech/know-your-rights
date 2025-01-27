@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import Translate from "../Components/Translate";
+import Translate from "../Translate/Translate";
 
 function Header() {
   return (

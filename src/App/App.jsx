@@ -1,10 +1,10 @@
 import Container from "react-bootstrap/Container";
-import Resources from "../Components/Resources";
-import Rights from "../Components/Rights";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
+import Resources from "../Components/Resources/Resources";
+import Rights from "../Components/Rights/Rights";
+import Footer from "../Components/Footer/Footer";
+import Header from "../Components/Header/Header";
 import "./App.scss";
-import Share from "../Components/Share";
+import Share from "../Components/Share/Share";
 
 function App() {
   return (
