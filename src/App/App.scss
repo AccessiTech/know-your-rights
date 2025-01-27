@@ -62,6 +62,20 @@ h1 {
   text-align: center;
   margin-bottom: $section-margin-bottom;
 
+  .resource-btn {
+    font-weight: bold;
+    width: 100%;
+    border: 2px solid $primary;
+    margin-bottom: 1rem;
+    color: $secondary;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      background-color: $secondary;
+    }
+  }
+
   .dropdown {
     width: 100%;
     margin-bottom: 1rem;

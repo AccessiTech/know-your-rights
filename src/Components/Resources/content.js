@@ -61,3 +61,51 @@ export const redCardsPrintLinks = {
   vietnamese:
     "https://www.ilrc.org/sites/default/files/documents/red_card-self_srv-vietnamese-20190603.pdf",
 };
+
+export const printableResources = {
+  redCards: {
+    title: "Red Cards",
+    description:
+      "Red Cards are a resource that can be used to assert your rights when interacting with law enforcement. They are available in multiple languages.",
+    source: "https://www.ilrc.org/red-cards",
+    links: Object.keys(redCardsPrintLinks).map((language) => ({
+      title: language,
+      url: redCardsPrintLinks[language],
+    })),
+  },
+  flyers: {
+    title: "Flyers",
+    description: "Printable flyers for distribution.",
+    source: "htts://redcards.accessi.tech/",
+    links: [
+      {
+        title: "Black and White",
+        url: "/assets/Flyer.pdf",
+      },
+      {
+        title: "Blank",
+        url: "/assets/Flyer_blank.pdf",
+      }
+    ],
+  },
+  qrCode: {
+    title: "QR Code",
+    description:
+      "A QR code that links to this. Print and distribute to help spread the word.",
+    source: "https://redcards.accessi.tech/",
+    links: [
+      {
+        title: "Black",
+        url: "/assets/qr_black.svg",
+      },
+      {
+        title: "White",
+        url: "/assets/qr.svg",
+      },
+      {
+        title: "Red",
+        url: "/assets/qr_red.svg",
+      }
+    ],
+  },
+};
