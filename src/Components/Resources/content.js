@@ -63,7 +63,7 @@ export const redCardsPrintLinks = {
 };
 
 export const printableResources = {
-  redCards: {
+  "Red Cards (Original)": {
     title: "Red Cards",
     description:
       "Red Cards are a resource that can be used to assert your rights when interacting with law enforcement. They are available in multiple languages.",
@@ -73,7 +73,7 @@ export const printableResources = {
       url: redCardsPrintLinks[language],
     })),
   },
-  flyers: {
+  "Printable Flyers": {
     title: "Flyers",
     description: "Printable flyers for distribution.",
     source: "htts://redcards.accessi.tech/",
@@ -88,7 +88,7 @@ export const printableResources = {
       }
     ],
   },
-  qrCode: {
+  "Printable QR Code": {
     title: "QR Code",
     description:
       "A QR code that links to this. Print and distribute to help spread the word.",
