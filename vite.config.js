@@ -6,13 +6,18 @@ export default defineConfig(() => {
   // const env = process?.env || {};
   return {
     plugins: [react()],
-
     css: {
       preprocessorOptions: {
         scss: {
           quietDeps: true,
           additionalData: `@import "./src/scss/variables.scss";`,
         },
+      },
+    },
+    build: {
+      rollupOptions: {
+        input: "src/index.jsx",
+        type: "react-jsx",
       },
     },
 
