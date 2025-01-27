@@ -4,6 +4,7 @@ import Rights from "../Components/Rights";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import "./App.scss";
+import Share from "../Components/Share";
 
 function App() {
   return (
@@ -12,10 +13,10 @@ function App() {
       <main id="content">
         <Rights />
         <Resources />
+        <Share />
       </main>
       <Footer />
     </Container>
   );
 }
-
 export default App;
