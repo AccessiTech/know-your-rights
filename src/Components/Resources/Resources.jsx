@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Col, Dropdown, Modal, Row } from "react-bootstrap";
-import { titleCase } from "../utils";
+import { titleCase } from "../../utils";
 import { digitalResources, redCardsPrintLinks } from "./content";
 
 
@@ -14,7 +14,7 @@ function Resources() {
         <Col>
           <h2 id="digital-resources">Digital Resources</h2>
           <Row style={{
-            marginBottom: "4rem",
+            marginBottom: "3rem",
             justifyContent: "center",
           }}>
             {/* buttons for digital resources */}

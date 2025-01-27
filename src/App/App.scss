@@ -29,7 +29,7 @@ h1 {
 }
   
 #rights {
-  margin-bottom: 4rem;
+  margin-bottom: $section-margin-bottom;
 
   .external-link {
     display: flex;
@@ -60,7 +60,7 @@ h1 {
 
 #resources {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: $section-margin-bottom;
 
   .dropdown {
     width: 100%;
