@@ -1,20 +1,25 @@
+import PropTypes from "prop-types";
 import { Row, Col } from "react-bootstrap";
 
-function Share() {
+function Share({ siteUrl, linkText, shareTitle, shareText }) {
+  const url = siteUrl || "https://redcards.accessi.tech";
+  const text = linkText || url.slice(8);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   const shareHandler = (e) => {
     e.preventDefault();
 
     if (!isMobile) {
-      navigator.clipboard.writeText("https://redcards.accessi.tech");
+      navigator.clipboard.writeText(url);
       alert("Link copied to clipboard");
       return;
     }
+
     navigator
       .share({
-        title: "Red Cards",
-        text: "Know Your Rights",
-        url: "https://redcards.accessi.tech",
+        title: shareTitle || document.title,
+        text: shareText || "Know Your Rights",
+        url,
       })
       .then(() => {
         console.log("Thanks for sharing!");
@@ -45,12 +50,19 @@ function Share() {
               src="/assets/qr.svg"
               alt="QR code to this website"
             />
-            <p>redcards.accessi.tech</p>
+            <p>{text}</p>
           </a>
         </Col>
       </Row>
     </section>
   );
 }
+
+Share.propTypes = {
+  siteUrl: PropTypes.string,
+  linkText: PropTypes.string,
+  shareTitle: PropTypes.string,
+  shareText: PropTypes.string,
+};
 
 export default Share;
