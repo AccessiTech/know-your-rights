@@ -4,11 +4,12 @@
   "private": false,
   "version": "1.2.1",
   "type": "module",
+  "main": "index.jsx",
   "scripts": {
     "dev": "vite",
     "start": "vite",
     "build": "vite build",
-    "test": "vite test",
+    "test": "vitest --root src/",
     "deploy": "VITE_APP_ENV=production vite build --outDir docs && cp docs/index.html docs/404.html",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -21,6 +22,9 @@
     "reduxjs-toolkit-persist": "^7.2.1"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react-swc": "^3.3.2",
@@ -30,9 +34,11 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "jsdom": "^26.0.0",
     "prop-types": "^15.8.1",
     "react-bootstrap": "^2.8.0",
     "sass": "^1.66.1",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "vitest": "^3.0.4"
   }
 }

@@ -14,12 +14,7 @@ export default defineConfig(() => {
         },
       },
     },
-    build: {
-      rollupOptions: {
-        input: "src/index.jsx",
-        type: "react-jsx",
-      },
-    },
+
 
     // base url should be /RedCards/ for gh-pages and / for development
     // base: env.VITE_APP_ENV === "production" ? "/RedCards/" : "/",
