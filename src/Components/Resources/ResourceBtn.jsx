@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 
 function ResourceBtn({ source, data, setModalContent, setShowModal }) {
@@ -24,5 +25,12 @@ function ResourceBtn({ source, data, setModalContent, setShowModal }) {
     </Button>
   );
 }
+
+ResourceBtn.prototype = {
+  source: PropTypes.string,
+  data: PropTypes.object,
+  setModalContent: PropTypes.func,
+  setShowModal: PropTypes.func,
+};
 
 export default ResourceBtn;
