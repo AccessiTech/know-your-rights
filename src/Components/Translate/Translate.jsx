@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import "./Translate.scss";
 import PropTypes from "prop-types";
 
-function Translate({ hideCredit }) {
+function Translate({ hideCredit } = {}) {
   useEffect(() => {
     if (document.getElementById("google_translate_element") && !window.google) {
       const script = document.createElement("script");
