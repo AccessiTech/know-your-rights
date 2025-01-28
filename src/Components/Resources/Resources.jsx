@@ -6,15 +6,16 @@ import {
   digitalResources,
   printableResources,
 } from "./content";
+import PropTypes from "prop-types";
 
 
-
-function Resources() {
+function Resources({ hideDigitals, hidePrintables }) {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
   return (
     <section id="resources">
+      {!hideDigitals && (
       <Row>
         <Col>
           <h2 id="digital-resources">Digital Resources</h2>
@@ -38,6 +39,8 @@ function Resources() {
           </Row>
         </Col>
       </Row>
+      )}
+      {!hidePrintables && (
       <Row>
         <Col>
           <h2 id="printable-resources">Printable Resources</h2>
@@ -56,6 +59,7 @@ function Resources() {
           </Row>
         </Col>
       </Row>
+      )}
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton closeVariant="white">
           <Modal.Title>{modalContent?.title}</Modal.Title>
@@ -92,5 +96,10 @@ function Resources() {
     </section>
   );
 }
+
+Resources.prototype = {
+  hideDigitals: PropTypes.bool,
+  hidePrintables: PropTypes.bool,
+};
 
 export default Resources;
