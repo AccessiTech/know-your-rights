@@ -12,12 +12,29 @@ h1 {
 .nav-pills .show > .nav-link {
   border: 2px solid $primary;
 }
+
+.modal-item {
+  margin-bottom: 1rem;
+  .modal-link {
+    width: 100%;
+    border: 2px solid $primary;
+    margin-bottom: 1rem;
+    
+    &:hover,
+    &:focus {
+      color: $body-bg;
+      background-color: $primary;
+    }
+  }
+}
+  
 #rights {
+  margin-bottom: $section-margin-bottom;
+
   .external-link {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
     font-weight: bold;
     border-radius: 1rem;
     color: $body-bg;
@@ -42,9 +59,22 @@ h1 {
 }
 
 #resources {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   text-align: center;
+  margin-bottom: $section-margin-bottom;
+
+  .resource-btn {
+    font-weight: bold;
+    width: 100%;
+    border: 2px solid $primary;
+    margin-bottom: 1rem;
+    color: $secondary;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      background-color: $secondary;
+    }
+  }
 
   .dropdown {
     width: 100%;

@@ -8,5 +8,17 @@
     img {
       filter: brightness(0) invert(1);
     }
+
+  }
+
+  &.hide-credit {
+    color: transparent;
+    & > div {
+      color: transparent;
+      line-height: 0;
+    }
+    span {
+      display: none;
+    }
   }
 }
