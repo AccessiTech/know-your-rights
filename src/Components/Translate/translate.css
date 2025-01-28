@@ -1,0 +1,22 @@
+#google_translate_element {
+  margin-bottom: 1rem;
+}
+#google_translate_element > div {
+  color: white;
+}
+#google_translate_element > div a {
+  color: white;
+}
+#google_translate_element > div img {
+  filter: brightness(0) invert(1);
+}
+#google_translate_element.hide-credit {
+  color: transparent;
+}
+#google_translate_element.hide-credit > div {
+  color: transparent;
+  line-height: 0;
+}
+#google_translate_element.hide-credit span {
+  display: none;
+}/*# sourceMappingURL=translate.css.map */
