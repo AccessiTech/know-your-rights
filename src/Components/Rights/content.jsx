@@ -1,5 +1,5 @@
-
-
+// content for the right side of the Rights section
+export const rightHeader = "To the agent";
 export const rightColContent = (
   <>
     <p>
@@ -21,6 +21,8 @@ export const rightColContent = (
   </>
 );
 
+// content for the left side of the Rights section
+export const leftHeader = "You have constitutional rights";
 export const leftColContent = (
   <>
     <p>
@@ -46,6 +48,7 @@ export const leftColContent = (
   </>
 );
 
+// Content credit paragraph for the Rights section
 export const attribution = (
   <p className="credit">
     {`This is a digital version of the "Red Cards" created by `}
@@ -59,3 +62,8 @@ export const attribution = (
     {`.`}
   </p>
 );
+
+// Call to Action content for the bottom of the Rights section
+export const ctaUrl =
+  "https://www.informedimmigrant.com/resources/detention-deportation/know-your-rights/";
+export const ctaTitle = "More about YOUR RIGHTS";
