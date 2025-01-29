@@ -19,7 +19,7 @@ h1 {
     width: 100%;
     border: 2px solid $primary;
     margin-bottom: 1rem;
-    
+
     &:hover,
     &:focus {
       color: $body-bg;
@@ -27,7 +27,7 @@ h1 {
     }
   }
 }
-  
+
 #rights {
   margin-bottom: $section-margin-bottom;
 
@@ -61,7 +61,9 @@ h1 {
 #resources {
   text-align: center;
   margin-bottom: $section-margin-bottom;
-
+}
+#resources,
+#rights {
   .resource-btn {
     font-weight: bold;
     width: 100%;

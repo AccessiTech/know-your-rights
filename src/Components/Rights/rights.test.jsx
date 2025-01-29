@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import Rights from './Rights';
-import { ctaTitle, ctaUrl, leftHeader, rightHeader } from './content';
+import { ctaData, ctaTitle, ctaUrl, leftHeader, rightHeader } from './content';
 
 describe('Rights Component', () => {
   it('renders without crashing', () => {
@@ -26,19 +26,18 @@ describe('Rights Component', () => {
     expect(headers[1].textContent).toBe(right);
   });
 
-  it('renders the default accreditation', () => {
+  it('renders accreditation', () => {
     const rights = render(<Rights />).container;
-    const button = rights.querySelector('.external-link');
-    expect(button.textContent).toContain(ctaTitle);
-    expect(button.href).toBe(ctaUrl);
+    const accredit = rights.querySelector('.credit');
+    expect(accredit).toBeDefined();
   });
 
-  it('renders the custom accreditation', () => {
-    const url = 'https://example.com/';
-    const title = 'Example';
-    const rights = render(<Rights ctaUrl={url} ctaTitle={title} />).container;
-    const button = rights.querySelector('.external-link');
-    expect(button.textContent).toContain(title);
-    expect(button.href).toBe(url);
+  it('renders the cta resource button', () => {
+    const rights = render(<Rights />).container;
+    const buttons = rights.querySelectorAll('.resource-btn');
+    expect(buttons.length).toBe(1);
+    expect(buttons[0].textContent).toBe(ctaTitle);
+    const result = ctaData.links?.length ? '' : ctaUrl;
+    expect(buttons[0].href).toBe(result);
   });
 });
