@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Row, Col } from "react-bootstrap";
 
-function Share({ siteUrl, linkText, shareTitle, shareText }) {
+function Share({ siteUrl, linkText, shareTitle, shareText } = {}) {
   const url = siteUrl || "https://redcards.accessi.tech";
   const text = linkText || url.slice(8);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);

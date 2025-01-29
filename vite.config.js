@@ -6,7 +6,6 @@ export default defineConfig(() => {
   // const env = process?.env || {};
   return {
     plugins: [react()],
-
     css: {
       preprocessorOptions: {
         scss: {
@@ -15,6 +14,7 @@ export default defineConfig(() => {
         },
       },
     },
+
 
     // base url should be /RedCards/ for gh-pages and / for development
     // base: env.VITE_APP_ENV === "production" ? "/RedCards/" : "/",
