@@ -7,11 +7,11 @@ function ResourceBtn({ source, data, setModalContent, setShowModal }) {
       variant="primary"
       size="lg"
       className="resource-btn"
-      href={data.source}
+      href={data?.source}
       target="_blank"
       rel="noopener noreferrer"
       onClick={(e) => {
-        if (data.links) {
+        if (data?.links) {
           e.preventDefault();
           setModalContent({
             ...data,
@@ -21,7 +21,7 @@ function ResourceBtn({ source, data, setModalContent, setShowModal }) {
         }
       }}
     >
-      {data.title}
+      {data?.title}
     </Button>
   );
 }
