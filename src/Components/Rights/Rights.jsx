@@ -1,8 +1,13 @@
 import { Button, Col, Nav, Row, Tab } from "react-bootstrap";
-import { attribution, ctaUrl, ctaTitle, leftHeader, rightHeader, leftColContent, rightColContent } from "./content";
+import { attribution, ctaUrl, ctaTitle, leftHeader, rightHeader, leftColContent, rightColContent, ctaSource, ctaData } from "./content";
 import PropTypes from "prop-types";
+import ResourceBtn from "../Resources/ResourceBtn";
+import { useState } from "react";
+import ResourceModal from "../Resources/ResourceModal";
 
 function Rights(props) {
+  const [showModal, setShowModal] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
   
   return (
     <section id="rights">
@@ -52,7 +57,13 @@ function Rights(props) {
       </Row>
       <Row>
         <Col>
-          <Button
+          <ResourceBtn
+            source={ctaSource}
+            data={ctaData}
+            setShowModal={setShowModal}
+            setModalContent={setModalContent}
+          />
+          {/* <Button
             href={
               props.ctaUrl || ctaUrl
             }
@@ -63,9 +74,14 @@ function Rights(props) {
             className="external-link"
           >
             {props.ctaTitle || ctaTitle}
-          </Button>
+          </Button> */}
         </Col>
       </Row>
+      <ResourceModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalContent={modalContent}
+      />
     </section>
   );
 }

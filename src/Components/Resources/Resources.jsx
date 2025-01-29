@@ -7,6 +7,7 @@ import {
   printableResources,
 } from "./content";
 import PropTypes from "prop-types";
+import ResourceModal from "./ResourceModal";
 
 
 function Resources({ hideDigitals, hidePrintables }) {
@@ -60,39 +61,11 @@ function Resources({ hideDigitals, hidePrintables }) {
         </Col>
       </Row>
       )}
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header closeButton closeVariant="white">
-          <Modal.Title>{modalContent?.title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>{modalContent?.description}</p>
-          {modalContent?.links?.map((link) => (
-            <div key={link.title} className="modal-item">
-              {link.description ? <h3>{link.title}</h3> : null}
-              <p>{link.description}</p>
-              <Button
-                variant="primary-outline"
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-link"
-              >
-                {titleCase(link.title.replace(/_/g, " "))}
-              </Button>
-            </div>
-          ))}
-        </Modal.Body>
-        <Modal.Footer>
-          <a
-            href={modalContent?.source}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textAlign: "center", display: "block", width: "100%" }}
-          >
-            {modalContent?.sourceName}
-          </a>
-        </Modal.Footer>
-      </Modal>
+      <ResourceModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalContent={modalContent}
+      />
     </section>
   );
 }
