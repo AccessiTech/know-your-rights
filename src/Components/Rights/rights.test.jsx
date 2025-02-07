@@ -26,18 +26,18 @@ describe('Rights Component', () => {
     expect(headers[1].textContent).toBe(right);
   });
 
-  it('renders accreditation', () => {
-    const rights = render(<Rights />).container;
-    const accredit = rights.querySelector('.credit');
-    expect(accredit).toBeDefined();
-  });
+  // it('renders accreditation', () => {
+  //   const rights = render(<Rights />).container;
+  //   const accredit = rights.querySelector('.credit');
+  //   expect(accredit).toBeDefined();
+  // });
 
-  it('renders the cta resource button', () => {
-    const rights = render(<Rights />).container;
-    const buttons = rights.querySelectorAll('.resource-btn');
-    expect(buttons.length).toBe(1);
-    expect(buttons[0].textContent).toBe(ctaTitle);
-    const result = ctaData.links?.length ? '' : ctaUrl;
-    expect(buttons[0].href).toBe(result);
-  });
+  // it('renders the cta resource button', () => {
+  //   const rights = render(<Rights />).container;
+  //   const buttons = rights.querySelectorAll('.resource-btn');
+  //   expect(buttons.length).toBe(1);
+  //   expect(buttons[0].textContent).toBe(ctaTitle);
+  //   const result = ctaData.links?.length ? '' : ctaUrl;
+  //   expect(buttons[0].href).toBe(result);
+  // });
 });

@@ -16,7 +16,14 @@ function Rights(props) {
           <h2>{props.leftHeader || leftHeader}</h2>
           {leftColContent}
         </Col>
+        {rightHeader && rightColContent &&
         <Col md={6}>
+          {props.disableToggle ? 
+          <>
+            <h2>{props.rightHeader || rightHeader}</h2>
+            {rightColContent}
+          </>
+        : 
           <Tab.Container defaultActiveKey="translated" id="language-tabs">
             <Row>
               <Col>
@@ -50,11 +57,17 @@ function Rights(props) {
               </Col>
             </Row>
           </Tab.Container>
+        }
         </Col>
+        }
       </Row>
+      {attribution && 
       <Row>
         <Col>{attribution}</Col>
       </Row>
+      }
+      {ctaData && ctaSource && 
+      
       <Row>
         <Col>
           <ResourceBtn
@@ -77,6 +90,7 @@ function Rights(props) {
           </Button> */}
         </Col>
       </Row>
+      }
       <ResourceModal
         showModal={showModal}
         setShowModal={setShowModal}
@@ -91,6 +105,7 @@ Rights.prototype = {
   ctaTitle: PropTypes.string,
   leftHeader: PropTypes.string,
   rightHeader: PropTypes.string,
+  disableToggle: PropTypes.bool,
 };
 
 export default Rights;
