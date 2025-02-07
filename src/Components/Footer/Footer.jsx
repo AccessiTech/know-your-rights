@@ -9,7 +9,7 @@ function Footer() {
       <p className="credit">
         Click here to report an{" "}
         <a
-          href="https://github.com/AccessiTech/RedCards/issues/new?template=Blank+issue"
+          href="https://github.com/AccessiTech/know-your-rights/issues/new?template=Blank+issue"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -17,7 +17,7 @@ function Footer() {
         </a>
         , join the{" "}
         <a
-          href="https://github.com/AccessiTech/RedCards/discussions/2"
+          href="https://github.com/AccessiTech/know-your-rights/discussions"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -25,7 +25,7 @@ function Footer() {
         </a>
         , or view the site's{" "}
         <a
-          href="https://github.com/AccessiTech/RedCards"
+          href="https://github.com/AccessiTech/know-your-rights"
           target="_blank"
           rel="noopener noreferrer"
         >
