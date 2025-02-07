@@ -12,7 +12,7 @@ function App() {
       <Header lead={"Fight Tyranny with Truth"} />
       <main id="content">
         <Rights disableToggle />
-        <Resources />
+        {/* <Resources /> */}
         <Share />
       </main>
       <Footer />
