@@ -1,3 +1,3 @@
 # Know Your Rights
 
-## Fight Tyrrany with Truth
+Fight Tyrrany with Truth
