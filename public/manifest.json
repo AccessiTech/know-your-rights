@@ -1,10 +1,10 @@
 {
-  "name": "Red Cards",
-  "description": "This is a digital version of the 'Red Cards' created by the Immigration Legal Resource Center.",
-  "short_name": "redcards",
+  "name": "Know Your Rights",
+  "description": "This is a central project page for a campaign of microsites providing project context and links to more resources.",
+  "short_name": "knowyourrights",
   "start_url": "/",
   "lang": "en",
-  "theme_color": "#B11111",
+  "theme_color": "white",
   "display": "fullscreen",
   "icons": [
     {
