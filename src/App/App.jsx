@@ -9,10 +9,10 @@ import Share from "../Components/Share/Share";
 function App() {
   return (
     <Container>
-      <Header />
+      <Header lead={"Fight Tyranny with Truth"} />
       <main id="content">
-        <Rights />
-        <Resources />
+        <Rights disableToggle />
+        {/* <Resources /> */}
         <Share />
       </main>
       <Footer />

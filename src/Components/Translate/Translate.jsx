@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
-import "./Translate.scss";
+import "./translate.scss";
 import PropTypes from "prop-types";
 
 function Translate({ hideCredit } = {}) {

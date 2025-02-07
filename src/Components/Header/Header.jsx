@@ -8,8 +8,8 @@ function Header({ title, lead, disableTranslate } = {}) {
       <Row>
         <Col>
           <h1>{title || "Know Your Rights"}</h1>
-          {!disableTranslate && <Translate />}
           {lead && <p className="lead">{lead}</p>}
+          {!disableTranslate && <Translate />}
         </Col>
       </Row>
     </header>
