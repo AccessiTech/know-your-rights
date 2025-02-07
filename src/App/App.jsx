@@ -11,7 +11,7 @@ function App() {
     <Container>
       <Header lead={"Fight Tyranny with Truth"} />
       <main id="content">
-        <Rights />
+        <Rights disableToggle />
         <Resources />
         <Share />
       </main>
